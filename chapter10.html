@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+     <h1 id="heading">Привет, мир!</h1>
+    <script src="https://code.jquery.com/jquery-2.1.0.js">
+    </script>
+    <script>
+    /*  var counter = 5;
+ var printMessage = function () {
+ console.log("Ты смотришь в консоль уже " + counter + " сек");
+counter+= 5;
+};
+var intervalId = setInterval(printMessage, 5000);*/
+
+/*var leftOffset = 0;
+var moveHeading = function () {
+$("#heading").offset({ left: leftOffset });
+leftOffset+=1.5;
+if (leftOffset > 200) {
+  leftOffset = 0;
+}
+};
+setInterval(moveHeading, 30);*/
+
+/*var clickHandler = function (event) {
+console.log("Клик! " + event.pageX + " " + event.pageY);
+};
+ $("h1").click(clickHandler);*/
+ $("html").mousemove(function (event) {
+  $("#heading").offset({
+    left: event.pageX,
+ top: event.pageY
+ });
+ });
+
+    </script>
+  </body>
+</html>
