@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+var Car = function (x, y){
+  this.x = x;
+  this.y = y;
+}
+/*var drawCar = function(car)*/ Car.prototype.draw = function(){
+  var carHtml = '<img src="http://nostarch.com/images/car.png">';
+this.carElement = $(carHtml);
+  this.carElement.css({
+    position: "absolute",
+    left: this.x,
+    top: this.y
+  });
+  $("body").append(this.carElement);
+};
+Car.prototype.moveRight = function(){
+  this.x +=5;
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+Car.prototype.moveleft = function(){
+  this.x -=5;
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+Car.prototype.moveup = function(){
+  this.y -=5;
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+Car.prototype.movedown = function(){
+  this.y +=5;
+  this.carElement.css({
+    left: this.x,
+    top: this.y
+  });
+};
+var tesla = new Car(20, 20);
+var nissan = new Car(100, 200);
+/*drawCar(tesla);
+drawCar(nissan);*/
+tesla.draw();
+nissan.draw();
+var abc = function(){
+  nissan.moveRight();
+  if(nissan.x>400){
+    clearInterval(set);
+  }
+}
+ var set = setInterval(abc, 30);
+
+</script>
+  </body>
+</html>
