@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<canvas id="canvas" width="1000" height="1000"></canvas>
+<script type="text/javascript">
+var circle = function (x, y, radius, fill) {
+ ctx.beginPath();
+ ctx.arc(x, y, radius, 0, Math.PI * 2);
+ ctx.stroke();
+ if(fill === true){
+   ctx.fill();
+ }
+};
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#B3DCFD";
+ctx.fillRect(100, 22, 50, 50)
+ctx.fillRect(119.5, 70, 11, 13)
+ctx.fillRect(64, 83, 120, 8)
+ctx.fillRect(90.5, 85, 70, 70)
+ctx.fillRect(90.5, 155, 10, 30)
+ctx.fillRect(150.5, 155, 10, 30)
+ctx.fillStyle = "SkyBlue";
+ctx.fillRect(0, 200, 50, 80);
+ctx.fillStyle = "Turquoise";
+ctx.fillRect(50, 200, 50, 80);
+ctx.fillStyle = "PaleGreen";
+ctx.fillRect(100, 200, 50, 80);
+ctx.strokeStyle = "PaleGreen";
+ctx.lineWidth = 4;
+ctx.beginPath();
+ctx.moveTo(10, 10);
+ctx.lineTo(60, 60);
+ctx.moveTo(60, 10);
+ctx.lineTo(10, 60);
+ctx.stroke();
+ctx.strokeStyle = "LightPink";
+ctx.strokeRect(50, 300, 20, 20);
+ctx.beginPath();
+ctx.moveTo(60, 320);
+ctx.lineTo(60, 360);
+ctx.moveTo(60, 340);
+ctx.lineTo(40, 325);
+ctx.moveTo(60, 340);
+ctx.lineTo(80, 325);
+ctx.moveTo(60, 360);
+ctx.lineTo(45, 385);
+ctx.moveTo(60, 360);
+ctx.lineTo(75, 385);
+ctx.stroke();
+ctx.lineWidth = 3;
+ctx.fillStyle = "Black";
+ctx.strokeStyle = "Black";
+circle(70, 420, 20, false);
+circle(70, 470, 30, false);
+circle(62, 417, 4, true);
+circle(78, 417, 4, true);
+circle(70, 470, 4, true);
+circle(70, 455, 4, true);
+circle(70, 485, 4, true);
+ctx.fillStyle = "Orange";
+ctx.strokeStyle = "Orange";
+circle(70, 427, 3, true);
+</script>
+  </body>
+</html>
